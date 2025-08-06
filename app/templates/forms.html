@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <section class="form-container">
+        <h2 class="form-heading">Employee Churn Prediction Form</h2>
+        <form action="{{ url_for('main_routes.handle_form_submission') }}" method="POST" class="churn-form">
+    
+            <div class="form-row">
+                <!-- Personal Info Section -->
+                <div class="form-section">
+                    <h3>Personal Info</h3>
+                    <div class="input-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="Age" required class="input-field">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="department">Department:</label>
+                        <select id="department" name="Department" required class="select-field">
+                            <option value="">-- Select --</option>
+                            <option value="Research & Development">Research & Development</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Human Resources">Human Resources</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <!-- Work Related Features Section -->
+                <div class="form-section">
+                    <h3>Work Related Features</h3>
+                    <div class="input-group">
+                        <label for="overtime">OverTime:</label>
+                        <select id="overtime" name="OverTime" required class="select-field">
+                            <option value="">-- Select --</option>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="years_with_curr_manager">Years With Current Manager:</label>
+                        <input type="number" id="years_with_curr_manager" name="YearsWithCurrManager" required class="input-field">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="years_since_last_promotion">Years Since Last Promotion:</label>
+                        <input type="number" id="years_since_last_promotion" name="YearsSinceLastPromotion" required class="input-field">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="years_in_current_role">Years In Current Role:</label>
+                        <input type="number" id="years_in_current_role" name="YearsInCurrentRole" required class="input-field">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="years_at_company">Years At Company:</label>
+                        <input type="number" id="years_at_company" name="YearsAtCompany" required class="input-field">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="total_working_years">Total Working Years:</label>
+                        <input type="number" id="total_working_years" name="TotalWorkingYears" required class="input-field">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="num_companies_worked">Number of Companies Worked:</label>
+                        <input type="number" id="num_companies_worked" name="NumCompaniesWorked" required class="input-field">
+                    </div>
+                </div>
+    
+                <!-- Income & Benefits Section -->
+                <div class="form-section">
+                    <h3>Income & Benefits</h3>
+                    <div class="input-group">
+                        <label for="monthly_income">Monthly Income:</label>
+                        <input type="number" id="monthly_income" name="MonthlyIncome" required class="input-field">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="salary_slab">Salary Slab:</label>
+                        <select id="salary_slab" name="SalarySlab" required class="select-field">
+                            <option value="">-- Select --</option>
+                            <option value="Upto 5k">Upto 5k</option>
+                            <option value="5k-10k">5k-10k</option>
+                            <option value="10k-15k">10k-15k</option>
+                            <option value="15k+">15k+</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="stock_option_level">Stock Option Level:</label>
+                        <input type="number" id="stock_option_level" name="StockOptionLevel" required class="input-field">
+                    </div>
+                </div>
+    
+                <!-- Satisfaction & Involvement Section -->
+                <div class="form-section">
+                    <h3>Satisfaction & Involvement</h3>
+                    <div class="input-group">
+                        <label for="environment_satisfaction">Environment Satisfaction:</label>
+                        <input type="number" id="environment_satisfaction" name="EnvironmentSatisfaction" min="1" max="4" required class="input-field">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="job_satisfaction">Job Satisfaction:</label>
+                        <input type="number" id="job_satisfaction" name="JobSatisfaction" min="1" max="4" required class="input-field">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="job_involvement">Job Involvement:</label>
+                        <input type="number" id="job_involvement" name="JobInvolvement" min="1" max="4" required class="input-field">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+
+        </form>
+    </section>
+    
+    
+
+
+    {% endblock %}
+
+</body>
+</html>

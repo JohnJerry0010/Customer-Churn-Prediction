@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attrition Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For icons -->
+   
+</head>
+
+<body>
+    <!-- Main Navigation Bar -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="site-logo">
+                <a href="#" class="logo-text">Retain<span>Vision</span></a>
+                <p class="tagline">Predict & Prevent Employee Churn with Precision</p>
+            </div>
+    
+            <nav class="navbar">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+    
+                <ul class="nav-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Introduction Section -->
+<section id="introduction" class="section intro-bg">
+    <div class="container intro-container">
+        <div class="intro-content">
+            <h1 class="intro-title">Welcome to <span>Employee Attrition Prediction</span></h1>
+            <p class="intro-description">
+                In today’s competitive market, <strong>Employee retention</strong> is more critical than ever. 
+                <span class="brand">RetainVision</span> empowers businesses to predict and reduce Employee churn 
+                by analyzing behavioral patterns and providing actionable insights. 
+                Our <em>advanced algorithms</em> and data-driven predictions help you understand churn likelihood, 
+                so you can take proactive steps to build lasting relationships.
+            </p>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="container cta-container">
+        <div class="cta-card">
+            <h2>Start Predicting Employee Attrition Now</h2>
+            <p>Upload employee data and get instant predictions to boost retention.</p>
+            <a href="{{ url_for('main_routes.show_form') }}" class="cta-button">Start Prediction</a>
+        </div>
+    </div>
+</section>
+
+    
+    
+
+<!-- How It Works Section -->
+<section id="how-it-works" class="section how-it-works-bg">
+    <div class="container how-it-works-container">
+        <h2 class="section-title">How <span>RetainVision</span> Works</h2>
+        <p class="section-description">
+            Our platform simplifies churn prediction with intuitive steps and powerful technology.
+        </p>
+
+        <div class="steps-grid">
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="fas fa-file-upload"></i>
+                </div>
+                <h3>1. Data Input</h3>
+                <p>Upload employee data like demographics, purchase history, and behavior—quick and easy through our form.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>2. Data Analysis</h3>
+                <p>Our AI-driven engine detects churn patterns through advanced ML models and smart segmentation.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>3. Prediction</h3>
+                <p>Receive churn risk scores with personalized insights, helping you understand who's likely to leave—and why.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>4. Take Action</h3>
+                <p>Act with targeted strategies to retain employees and boost lifetime value, backed by real-time insights.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+    <!-- About Section -->
+    <!-- About Section -->
+<section id="about" class="section about-section">
+    <div class="container">
+      <!-- Animated Heading -->
+      <h2 class="section-title">Why <span>Choose</span> RetainVision?</h2>
+  
+      <!-- Lead Paragraph -->
+      <p class="about-intro">
+        RetainVision is more than a churn prediction tool – it’s your smart partner in employee retention. Our AI-powered platform provides proactive, personalized insights to help your business thrive.
+      </p>
+  
+      <!-- Key Benefits Grid -->
+      <div class="benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-card">
+          <div class="icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Accurate Predictions</h3>
+          <p>Harness historical and real-time data to foresee churn before it happens and act with confidence.</p>
+        </div>
+  
+        <!-- Benefit 2 -->
+        <div class="benefit-card">
+          <div class="icon"><i class="fas fa-user-check"></i></div>
+          <h3>Personalized Insights</h3>
+          <p>Go beyond numbers—RetainVision reveals *why* employees leave, so your strategies hit the mark.</p>
+        </div>
+  
+        <!-- Benefit 3 -->
+        <div class="benefit-card">
+          <div class="icon"><i class="fas fa-brain"></i></div>
+          <h3>Data-Driven Decisions</h3>
+          <p>Drive smarter engagement and employee satisfaction with targeted offers and intelligent actions.</p>
+        </div>
+  
+        <!-- Benefit 4 -->
+        <div class="benefit-card">
+          <div class="icon"><i class="fas fa-sync-alt"></i></div>
+          <h3>Continuous Improvement</h3>
+          <p>RetainVision learns as you grow—our adaptive models refine predictions as new data flows in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    
+
+
+    <!-- Testimonials Section -->
+ <!-- Testimonials Section -->
+<section id="testimonials" class="section testimonials-bg">
+    <div class="container">
+      <h2>What Our Users Are Saying</h2>
+  
+      <!-- Testimonials Wrapper (Carousel) -->
+      <div class="testimonial-carousel">
+        <!-- Testimonial Item 1 -->
+        <div class="testimonial-item">
+          <div class="testimonial-img">
+            <!-- <img src="https://via.placeholder.com/80" alt="John Doe">-->
+          </div>
+          <p>"This tool has helped us predict churn more accurately, saving us time and money. A must-have for any employee-centric business!"</p>
+          <h4>Sundar Pichai</h4>
+          <span class="testimonial-role">CEO, Google</span>
+        </div>
+  
+        <!-- Testimonial Item 2 -->
+        <div class="testimonial-item">
+          <div class="testimonial-img">
+            <!-- <img src="https://via.placeholder.com/80" alt="Jane Smith">-->
+          </div>
+          <p>"The insights provided by the model are invaluable. It's helped us target at-risk employees and improve retention strategies."</p>
+          <h4>Satya Nadella</h4>
+          <span class="testimonial-role">CEO, Microsoft</span>
+        </div>
+  
+        <!-- Testimonial Item 3 -->
+        <div class="testimonial-item">
+          <div class="testimonial-img">
+            <!--<img src="https://via.placeholder.com/80" alt="Sarah Lee">-->
+          </div>
+          <p>"Easy to use, fast results, and most importantly, it works! We’ve seen a measurable impact on our retention rates."</p>
+          <h4>Narayana Murthy</h4>
+          <span class="testimonial-role">Co-founder of Infosys</span>
+        </div>
+      </div>
+  
+      <!-- Carousel Navigation -->
+      <div class="carousel-nav">
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+      </div>
+    </div>
+  </section>
+
+<!-- Contact Section -->
+<section id="contact" class="section contact-bg">
+  <div class="container">
+      <!-- Section Heading -->
+      <h2>Contact Us</h2>
+      <p>If you have any questions or need support, feel free to reach out to us!</p>
+
+      <!-- Contact Form -->
+      <form id="contactForm" class="contact-form">
+          <fieldset>
+              <legend>Send Us a Message</legend>
+
+              <!-- Name Input -->
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required class="input-field">
+
+              <!-- Email Input -->
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required class="input-field">
+
+              <!-- Message Textarea -->
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" placeholder="Write your message..." rows="4" required class="input-field"></textarea>
+
+              <!-- Submit Button -->
+              <button type="submit" class="submit-btn">Submit</button>
+
+              <!-- Confirmation Message (Inside the Form) -->
+              <div id="confirmationMessage"> Message sent successfully!</div>
+          </fieldset>
+      </form>
+  </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Stop the form from navigating away
+
+      // Show confirmation message inside the form
+      const confirmationMessage = document.getElementById("confirmationMessage");
+      confirmationMessage.style.display = "block"; // Make it visible
+      confirmationMessage.textContent = " Message sent successfully!"; // Set the message
+
+      // Optional: Clear the form
+      this.reset();
+  });
+</script>
+
+
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 RetainVision. All rights reserved.</p>
+        </div>
+    </footer>
+    
+   
+</body>
+
+</html>

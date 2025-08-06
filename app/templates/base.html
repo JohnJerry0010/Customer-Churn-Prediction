@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attrition Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For icons -->
+</head>
+
+<body>
+    <!-- Main Navigation Bar -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="site-logo">
+                <a href="#" class="logo-text">Retain<span>Vision</span></a>
+                <p class="tagline">Predict & Prevent Employee Churn with Precision</p>
+            </div>
+    
+            <nav class="navbar">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+    
+                <ul class="nav-links">
+                    <!-- Link to the testimonials section on the same page -->
+                    <li><a href="{{ url_for('main_routes.index') }}#testimonials">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content Block (To be filled by other pages) -->
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
